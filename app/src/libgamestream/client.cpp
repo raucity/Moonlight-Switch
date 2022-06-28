@@ -437,8 +437,8 @@ int gs_start_app(PSERVER_DATA server, STREAM_CONFIGURATION* config, int appId,
     std::string result;
 
     PDISPLAY_MODE mode = server->modes;
-    bool correct_mode = false;
-    bool supported_resolution = false;
+    bool correct_mode = true;
+    bool supported_resolution = true;
 
     while (mode != NULL) {
         if (mode->width == config->width && mode->height == config->height) {
